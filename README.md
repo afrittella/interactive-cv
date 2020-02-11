@@ -11,10 +11,11 @@ All data is stored on a single [Firebase](https://firebase.google.com/) realtime
 If you want to know the data structure check the [data/entities](https://github.com/afrittella/interactive-cv/tree/master/src/data/entities) folder.
 
 To run this project:
-1) create a "realtime database" on Firebase console
-2) copy `.env.example` to `.env.development`, and fill all the Firebase configuration values
-3) run `yarn` or (`npm install`)
-4) run `yarn start` or (`npm start`) and go to [http://localhost:3000](http://localhost:3000)
+
+1. create a "realtime database" on Firebase console
+2. copy `.env.example` to `.env.development`, and fill all the Firebase configuration values
+3. run `yarn` or (`npm install`)
+4. run `yarn start` or (`npm start`) and go to [http://localhost:3000](http://localhost:3000)
 
 ... enjoy :)
 
@@ -30,4 +31,8 @@ To run this project:
 
 I'm happy to receive proposals, suggestions, pull requests and anything else you may want to send me.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Credits
+
+-   This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   [React: SVG Stroke Animation with CSS Explained](https://medium.com/@rossbulat/react-svg-stroke-animation-with-css-explained-c1e8e3d2e206) showing how to create a menu toggle button.
+-   [React Vertical Timeline](https://github.com/stephane-monnot/react-vertical-timeline) partially inspired me when building the timeline component.
