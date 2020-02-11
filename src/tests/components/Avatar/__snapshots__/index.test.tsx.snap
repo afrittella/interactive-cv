@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders avatar 1`] = `
+<div
+  class="avatar"
+>
+  <a
+    href=""
+  >
+     
+  </a>
+</div>
+`;
