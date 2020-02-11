@@ -13,6 +13,7 @@ const HomePage: React.FunctionComponent = () => {
         <Main
             isSmall={isSmall}
             title="About"
+            alignTop={true}
             content={
                 profile ? (
                     <Panel isSmall={isSmall}>

@@ -44,12 +44,12 @@ export const Wrapper = styled.div<IWrapperProps>`
             stroke-dashoffset: 100%;
         }
         100% {
-            stroke-dashoffset: 0%;
+            stroke-dashoffset: 0;
         }
     }
     @keyframes draw_out {
         0% {
-            stroke-dashoffset: 0%;
+            stroke-dashoffset: 0;
         }
         100% {
             stroke-dashoffset: 100%;
@@ -122,8 +122,8 @@ export const Wrapper = styled.div<IWrapperProps>`
         overflow: visible;
         width: 100%;
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         path {
             stroke: ${props => props.color || ''};
             stroke-dasharray: 100%;

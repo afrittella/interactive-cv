@@ -19,7 +19,7 @@ const Menu: React.FunctionComponent<IMenu> = ({
     const [location, setLocation] = React.useState(history.location.pathname);
 
     React.useEffect(() => {
-        history.listen((location, action) => setLocation(location.pathname));
+        history.listen(location => setLocation(location.pathname));
     }, [history]);
 
     const handleSelect = (url: string) => {

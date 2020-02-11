@@ -1,11 +1,6 @@
 import React from 'react';
 import { IDictionary } from 'helpers/definitions';
 
-export function getInitials(name: string): string {
-    let initials = name.match(/\b\w/g) || [];
-    return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
-}
-
 export function highlightFirstLetter(value: string): React.ReactNode {
     return (
         <>
@@ -25,9 +20,11 @@ export const groupBy = (key: string, sort: string) => (array: Array<any>) => {
     );
 
     for (let key in reducedObject) {
-        reducedObject[key] = reducedObject[key].sort((a: any, b: any) =>
-            a[sort] < b[sort] ? 1 : -1,
-        );
+        if (reducedObject.hasOwnProperty(key)) {
+            reducedObject[key] = reducedObject[key].sort((a: any, b: any) =>
+                a[sort] < b[sort] ? 1 : -1,
+            );
+        }
     }
 
     return reducedObject;

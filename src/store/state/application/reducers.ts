@@ -21,12 +21,12 @@ const reducerMap: IReducerMap<IApplicationState, IApplicationAction> = {
         };
     },
 
-    [ApplicationActions.SET_IS_FETCHING]: (state, action) => ({
+    [ApplicationActions.SET_IS_FETCHING]: state => ({
         ...state,
         isFetching: true,
     }),
 
-    [ApplicationActions.SET_IS_NOT_FETCHING]: (state, action) => ({
+    [ApplicationActions.SET_IS_NOT_FETCHING]: state => ({
         ...state,
         isFetching: false,
     }),

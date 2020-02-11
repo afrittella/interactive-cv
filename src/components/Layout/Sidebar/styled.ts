@@ -25,26 +25,26 @@ export const Hamburger = styled.div<{ isSidebarVisible: boolean }>`
 export const SidebarContent = styled.aside<
     ISidebar & { isSidebarVisible: boolean }
 >`
-    ${props => {
-        if (props.isSmall) {
-            return `
-                width: 30rem;
-                height: 100vh;
-                position: fixed;
-                overflow: auto;
-                top: 0;left: 0;
-                z-index: 9998;
-                margin-left: -30rem;
-            `;
-        }
-    }}
+${props => {
+    if (props.isSmall) {
+        return `
+                    width: 30rem;
+                    height: 100vh;
+                    position: fixed;
+                    overflow: auto;
+                    top: 0;left: 0;
+                    z-index: 9998;
+                    margin-left: -30rem;
+                `;
+    }
+}}
     
-    background-color: ${props => props.theme.colorDark};
-    color: ${props => props.theme.colorMedium};
-    flex: 0 0 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: margin-left 1s;
-    ${props => props.isSidebarVisible && 'margin-left: 0'};
+background-color: ${props => props.theme.colorDark};
+color: ${props => props.theme.colorMedium};
+flex: 0 0 30rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: margin-left 1s;
+${props => props.isSidebarVisible && 'margin-left: 0'};
 `;

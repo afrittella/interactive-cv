@@ -31,12 +31,19 @@ const SkillsPage: React.FunctionComponent = () => {
     ): React.ReactNodeArray => {
         let chartPanel: React.ReactNodeArray = [];
         for (let key in skills) {
-            chartPanel.push(
-                <ShadowFullWidthPanel key={`panel_${key}`} isSmall={isSmall}>
-                    <h5>{key}</h5>
-                    <BarChart entries={getSkillsConfiguration(skills[key])} />
-                </ShadowFullWidthPanel>,
-            );
+            if (skills.hasOwnProperty(key)) {
+                chartPanel.push(
+                    <ShadowFullWidthPanel
+                        key={`panel_${key}`}
+                        isSmall={isSmall}
+                    >
+                        <h5>{key}</h5>
+                        <BarChart
+                            entries={getSkillsConfiguration(skills[key])}
+                        />
+                    </ShadowFullWidthPanel>,
+                );
+            }
         }
 
         return chartPanel;

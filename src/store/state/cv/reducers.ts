@@ -52,7 +52,7 @@ const reducerMap: IReducerMap<ICVState, ICVAction> = {
         };
     },
 
-    [CVActions.RESET]: state => ({
+    [CVActions.RESET]: () => ({
         ...initialState,
     }),
 };

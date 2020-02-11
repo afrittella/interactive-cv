@@ -15,7 +15,6 @@ const MenuItem: React.FunctionComponent<IMenuItem> = ({
     url,
     onClickHandler,
     label,
-    isActive = false,
     highlightFirstLetter = true,
     className,
 }) => {

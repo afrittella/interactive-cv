@@ -15,7 +15,6 @@ const Sidebar: React.FunctionComponent<ISidebar> = ({
     isVisible = false,
     isSmall,
     onHamburgerClick,
-    className,
 }) => {
     return (
         <>

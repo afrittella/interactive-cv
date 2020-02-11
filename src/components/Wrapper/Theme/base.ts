@@ -53,5 +53,4 @@ export const Base = createGlobalStyle`
         color: ${props => props.theme.colorMidDark};
       }
     }
-}
-`;
+}`;
