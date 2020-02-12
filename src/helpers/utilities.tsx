@@ -10,7 +10,11 @@ export function highlightFirstLetter(value: string): React.ReactNode {
     );
 }
 
-export const groupBy = (key: string, sort: string) => (array: Array<any>) => {
+export const groupBy = (
+    key: string,
+    sort: string,
+    direction: string = 'ASC',
+) => (array: Array<any>) => {
     const reducedObject: IDictionary = array.reduce(
         (objectsByKeyValue, obj) => ({
             ...objectsByKeyValue,
@@ -21,9 +25,13 @@ export const groupBy = (key: string, sort: string) => (array: Array<any>) => {
 
     for (let key in reducedObject) {
         if (reducedObject.hasOwnProperty(key)) {
-            reducedObject[key] = reducedObject[key].sort((a: any, b: any) =>
-                a[sort] < b[sort] ? 1 : -1,
-            );
+            reducedObject[key] = reducedObject[key].sort((a: any, b: any) => {
+                if (direction === 'DESC') {
+                    return a[sort] < b[sort] ? 1 : -1;
+                }
+
+                return a[sort] < b[sort] ? -1 : 1;
+            });
         }
     }
 

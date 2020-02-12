@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a CenteredBox 1`] = `
+<div
+  class="sc-AxjAm jCwkpD"
+>
+  <div
+    class="sc-AxjAm jCwkpD__box"
+  >
+    <p>
+      Test
+    </p>
+  </div>
+</div>
+`;

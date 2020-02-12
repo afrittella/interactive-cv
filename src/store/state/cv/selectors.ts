@@ -35,5 +35,5 @@ export const selectGroupedSkills = (state: IRootState) => {
         skills.sort((a, b) => (a.type > b.type ? 1 : -1));
     }
 
-    return skills && groupBy('type', 'formula')(skills);
+    return skills && groupBy('type', 'formula', 'DESC')(skills);
 };
