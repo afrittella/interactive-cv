@@ -95,7 +95,7 @@ const BarChart: React.FunctionComponent<IBarChart> = ({
     );
 };
 
-export default styled(BarChart)`
+export default styled(React.memo(BarChart))`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
