@@ -12,14 +12,7 @@ import SocialLinks from 'components/SocialLinks';
 import avatar from 'assets/images/logo_small.png';
 import { IStyledBase } from 'helpers/definitions';
 import styled from 'styled-components';
-
-const Header = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: ${props => props.theme.sSize} 0;
-`;
+import { Header } from 'components/Layout/styled';
 
 const Layout: React.FunctionComponent<IStyledBase> = ({
     children,
