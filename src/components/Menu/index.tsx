@@ -45,7 +45,7 @@ const Menu: React.FunctionComponent<IMenu> = ({
     );
 };
 
-export default styled(React.memo(Menu))`
+export default styled(Menu)`
     width: 100%;
     text-align: right;
     margin: ${props => props.theme.mSize};

@@ -1,7 +1,6 @@
 import React from 'react';
 import { IStyledBase, TCallback } from 'helpers/definitions';
-import styled from 'styled-components';
-import { lighten } from 'polished';
+import { Item } from 'components/Menu/Item/styled';
 
 export interface IMenuItem extends IStyledBase {
     url: string;
@@ -17,6 +16,7 @@ const MenuItem: React.FunctionComponent<IMenuItem> = ({
     label,
     highlightFirstLetter = true,
     className,
+    isActive,
 }) => {
     const handleClick = (ev: React.MouseEvent) => {
         ev.preventDefault();
@@ -40,39 +40,12 @@ const MenuItem: React.FunctionComponent<IMenuItem> = ({
     };
 
     return (
-        <li className={className}>
+        <Item isActive={isActive}>
             <a href={url} onClick={handleClick}>
                 {getLabel(label)}
             </a>
-        </li>
+        </Item>
     );
 };
 
-export default styled(React.memo(MenuItem))`
-    padding: ${props =>
-        `${props.theme.xsSize} ${props.theme.mSize} ${props.theme.xsSize} 0`};
-    border-right: 4px solid transparent;
-    transition: border-color 0.3s ease;
-    font-size: ${props => props.theme.fontSizeH5};
-
-    a {
-        display: block;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: ${props =>
-            props.isActive
-                ? props.theme.colorWhite
-                : lighten(0.2, props.theme.colorMedium)};
-
-        &:hover {
-            color: ${props => props.theme.colorLight};
-        }
-
-        span {
-            font-size: ${props => props.theme.fontSizeH4};
-            color: ${props => props.theme.colorLight};
-        }
-    }
-
-    border-color: ${props => (props.isActive ? props.theme.colorLight : '')};
-`;
+export default React.memo(MenuItem);
