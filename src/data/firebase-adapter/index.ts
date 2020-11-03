@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import firebase from 'firebase';
 import 'firebase/database';
 import { firebaseConfig as config } from 'data/firebase-adapter/definitions';
 import { ICVEntity } from 'data/entities/definitions';
